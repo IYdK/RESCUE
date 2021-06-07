@@ -1,5 +1,5 @@
 Package: RESCUE
-Title: Implementation of the KDIGO AKI guideline serum creatinine criteria
+Title: Implementation of the KDIGO AKI guideline SCr criteria for AKI diagnosis and staging
 Version: 0.0.1
 Authors@R: 
     person(given = "Izak",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "i.a.r.dekom@amsterdamumc.nl",
            comment = c(ORCID = "0000-0002-8655-2521"))
-Description: Acute kidney injury (AKI) diagnosis and staging using the KDIGO AKI serum creatinine (SCr) crteria
+Description: Acute kidney injury (AKI) diagnosis and staging using the Kidney Disease: Improving Global Outcomes (KDIGO) AKI serum creatinine (SCr) guideline criteria.
 URL: https://github.com/IYdK/RESCUE
 BugReports: https://github.com/IYdK/RESCUE/issues
 License: `use_mit_license()`
