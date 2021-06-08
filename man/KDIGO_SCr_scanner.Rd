@@ -8,7 +8,7 @@
 KDIGO_SCr_scanner(data, wrong_stage_3_crit = FALSE)
 }
 \arguments{
-\item{data}{Data frame with SCr samples in rows and the following columns: Admission IDs ('admission' - Integer), admission time ('admission_time' - POSIX), SCr sample timestamps ('time' - POSIX) and SCr sample values ('value' - Numeric) in μmol/L}
+\item{data}{Data frame with one SCr sample per row and the following columns: Admission IDs ('admission' - Integer), admission time ('admission_time' - POSIX), SCr sample timestamps ('time' - POSIX) and SCr sample values ('value' - Numeric) in μmol/L}
 
 \item{wrong_stage_3_crit}{Boolean, if TRUE, an incorrect stage 3 SCr criterion will be used to stage admissions with AKI: An increase in SCr by 4.0 mg/dl (353.6 μmol/L) instead of an increase to or beyond 4.0 mg/dl (353.6 μmol/L)}
 }
@@ -50,7 +50,7 @@ Data frame containing the original data and the added AKI diagnosis and stage st
 \description{
 Acute kidney injury (AKI) diagnosis and staging using the Kidney Disease: Improving Global Outcomes (KDIGO) AKI serum creatinine (SCr) guideline criteria [1]. Admissions are first screened for AKI; AKI is diagnosed if the SCr sample values show an absolute or relative (compared to the SCr baseline) increase within the required time-windows, as specified in the KDIGO AKI guideline (See the KDIGO AKI guideline at 2.1.1 on page 19). Next, admissions with AKI are staged; for each SCr sample value at and after AKI onset, the absolute increase (compared to the minimum value before AKI onset), relative increase (compared to the SCr baseline) and absolute SCr values are computed and associated stages assigned. See the KDIGO AKI guideline at 2.1.2, Table 2 (page 19) and the "Timeframe for diagnosis and staging" paragraph on pages 30-31.
 
-All data presented are entirely fictional and perhaps even nonsensical. They are meant to serve an educational purpose in understanding how the code for AKI diagnosis and staging according to KIDIGO AKI guideline criteria, works. Furthermore, while very effort was made to ensure that accurate information was implemented in the code to implement AKI diagnosis and staging according to the KIDIGO AKI guideline serum creatinine criteria, we accept no liability or responsibility to any person or organization as a consequence of any reliance upon the information contained in the code or code use.
+All data presented in the KDIGO SCr scanner dummy dataset are entirely fictional and perhaps even nonsensical. They are meant to serve an educational purpose in understanding how the code for AKI diagnosis and staging according to KDIGO AKI guideline criteria, works. Furthermore, while very effort was made to ensure that accurate information was implemented in the code to implement AKI diagnosis and staging according to the KIDIGO AKI guideline serum creatinine criteria, we accept no liability or responsibility to any person or organization as a consequence of any reliance upon the information contained in the code or code use.
 
 [1] Kellum JA, Lameire N, Aspelin P, et al. Kidney disease: Improving global outcomes (KDIGO) acute kidney injury work group. KDIGO clinical practice guideline for acute kidney injury. Kidney International Supplements. 2012;2(1):1-138.
 
